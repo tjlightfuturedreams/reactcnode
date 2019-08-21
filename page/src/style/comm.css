@@ -1,0 +1,433 @@
+/*样式调试*/
+/* *{
+  border:1px solid red;
+} */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body, html, h1, h2, h3, h4, h5, h6, p, ol, ul, footer, header, article, aside, dt, dl, dd, fieldset, input, textarea, form, button, table, th, td, i, b, em, span, a, li {
+    padding: 0px;
+    margin: 0px;
+}
+ol,ul{
+  list-style:none;
+}
+html {
+  font-family:'\5FAE\8F6F\96C5\9ED1';
+    font-size: 62.5%;
+}
+a{
+  color:#666;
+  text-decoration:none;
+}
+button,input{
+  outline:none;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../fonts/fontawesome-webfont.eot?v=4.4.0');
+    src: url('../../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ui-footer {
+    /*padding: 6px 0px;*/
+    width: 100%;
+    background: green;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.ui-footer a {
+    width: 25%;
+    padding:6px 0px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ui-footer a.active{
+      background:#4CAF50;
+}
+.ui-footer a:before {
+    width: 27px;
+    height: 27px;
+    font-size: 27px;
+    margin: 0 auto;
+    display: block;
+}
+
+.ui-footer .ft-home:before {
+    content: '\f145';
+}
+
+.ui-footer .ft-about:before {
+    content: '\f1a5';
+}
+
+.ui-footer .ft-shop:before {
+    content: '\f055';
+}
+
+.ui-footer .ft-user:before {
+    content: '\f007';
+}
+/*header*/
+.ui-header-right{
+    position:absolute;
+    right:1rem;
+    top:0rem;
+}
+.ui-header-right span{
+  width:45px;
+  height:45px;
+  display:block;
+}
+.ui-header-right .ui-login-icon{
+      background:#009688;
+      color:#fff;
+}
+.ui-header-left{
+  position:absolute;
+  left:1rem;
+  top:0rem;
+}
+.ui-header-left a{
+  width:45px;
+  height:45px;
+  display:block;
+  text-align:center;
+  color:#fff;
+}
+header {
+    background:#009688;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 45px;
+    line-height: 45px;
+    position:relative;
+}
+
+header h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.shop-item{
+  overflow: hidden;
+  margin-top:10px;
+}
+.shop-item ul li a{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.shop-item ul li a i{
+  width:35px;
+  height:35px;
+  display: block;
+margin: 5px auto;
+  background-repeat: no-repeat;
+  background-image: url('../../img/f_icon.png');
+  background-size: 71px auto;
+}
+.item-online i{
+    background-position: 0 -173px;
+}
+.item-order i{
+        background-position: 0 -129px;
+}
+.item-cart i{
+        background-position: 0 -218px;
+}
+.ui-shop-dl{
+  position: relative;
+  margin-top:10px;
+  height:5.5rem;
+}
+.ui-shop-dl::before,.ui-shop-dl::after{
+  content:'';
+  display: table;
+  zoom:1;
+  height:0px;
+  line-height: 0px;
+  clear:both;
+}
+main{
+  padding:0  15px 50px;
+}
+.ui-shop-dl dt{
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:6rem;
+  height:5rem;
+  overflow: hidden;
+}
+.ui-shop-dl dt img{
+  height:100%;
+  width:100%;
+}
+.ui-shop-dl dd{
+  margin-left:7.7rem;
+}
+.ui-shop-dl dd h5{
+  margin-bottom:5px;
+    font-size:1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break:break-word
+}
+.ui-shop-dl dd p{
+  color:#ccc;
+}
+.ui-shop-list{
+  margin-top:10px;
+}
+.ui-shop-title{
+  text-align:left;
+  font-size:1.6rem;
+  /*padding-left:0.6rem;*/
+  height:45px;
+  line-height: 45px;
+  border-bottom:1px dashed #ddd;
+}
+
+
+/*article*/
+.content .ui-article-title{
+  text-align: center;
+  padding:1.5rem 0rem;
+  font-size:1.4rem;
+}
+.content .ui-article-title span{
+position: relative;
+}
+.content .ui-article-title span::before,.content .ui-article-title span::after{
+  position: absolute;
+  width:34px;
+  height:0px;
+  border-bottom:1px dashed #ddd;
+  content:'';
+  top:10px;
+}
+.content .ui-article-title span::before{
+  left:-38px;
+}
+.content .ui-article-title span::after{
+  left:60px;
+}
+.content .ui-article-content{
+  /*padding:10px;*/
+}
+.content .ui-article-content p{
+  font-size:1.6rem;
+  text-indent: 2em;
+  line-height: 2rem;
+}
+
+
+/*list*/
+.list-cts{
+  padding-top:1rem;
+  background: #ddd;
+}
+.content{
+  background: #fff;
+}
+.ui-nav-list >*{
+      display: table-cell;
+      vertical-align: middle;
+}
+.ui-nav-list  i{
+  width:3.2rem;
+  display: inline-block;
+  zoom:1;
+  font: normal normal normal 1.4rem/1 FontAwesome;
+  color:#ffa6a6;
+}
+.ui-nav-list{
+  padding:1.2rem 2.4rem;
+  border-bottom: 1px #e7e7e7 solid;
+}
+.ui-nav-list .list-left i.list-icon-file{
+
+}
+.ui-nav-list .list-left i.list-icon-file::before{
+  content:'\f0c5' ;
+}
+.ui-nav-list .list-left i.list-icon-cart::before{
+  content:"\f07a" ;
+}
+.ui-nav-list .list-left i.list-icon-local::before{
+  content:"\f041";
+}
+.ui-nav-list .list-left i.list-icon-mycs::before{
+  content:"\f097";
+}
+.ui-nav-list .list-left i.list-icon-star::before{
+  content:"\f006" ;
+}
+.ui-nav-list .list-left i.list-icon-set::before{
+  content:"\f013" ;
+}
+.ui-nav-list .list-left i.list-icon-money::before{
+  content:"\f093" ;
+}
+.ui-nav-list .list-midle{
+  width:1000rem;
+}
+.ui-nav-list .list-right i.right-icon-arrow::before{
+      content:"\f105" ;
+}
+.ui-nav-list .list-right i{
+  text-align: right;
+}
+
+.user-list-item{
+  padding:1rem 0rem;
+  margin-bottom:1rem;
+  background: #fff;
+}
+.user-list-item ul{
+  display: -webkit-box;
+  display: -o-box;
+  display: -ms-box;
+  display: -moz-box;
+  display: flex;
+}
+.user-list-item ul li{
+  border-right:1px solid #ddd;
+  -webkit-box-flex:1;
+  flex:1;
+  -ms-flex:1;
+  text-align: center;
+}
+.user-list-item ul li:last-child{
+  border-right:none;
+}
+
+/*register*/
+.ui-from-label{
+  margin:1rem 0;
+  padding-left:1rem;
+  border:1px solid #ddd;
+  border-radius:.5rem;
+}
+.ui-from-label input{
+  width:100%;
+  height:3rem;
+  border:0 none;
+  border-radius:0.4rem;
+}
+.ui-from-button button{
+  width:100%;
+  height:3rem;
+  border:0 none;
+  background:rgba(76, 175, 80, 0.84);
+  color:#fff;
+}
+
+/*ui-ariticel-detail*/
+.ui-ariticel-detail{
+  word-wrap: break-word;
+  padding-bottom:5rem;
+  }
+.ui-ariticel-detail img{
+  width:100%;
+}
+.ui-ariticel-detail pre{
+  word-wrap: normal;
+  overflow:auto;
+}
+.ui-ariticel-detail pre code{
+    word-break: normal;
+    white-space: pre;
+    overflow:visible;
+}
+.detail-wrapper h6{
+  padding:1rem;
+  font-size:1.6rem;
+}
+
+.re-list{
+	margin:1rem 0 6rem 0;
+}
+.re-list img{
+	width:100%;
+}
+ul.re-list  li.ui-detail-list{   
+ padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #ddd;
+	}
+.user-headimg {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-size: cover;
+    background-color: #eee;
+}
+.markdown-body p{
+	margin-top: 0;
+    margin-bottom: 16px;
+}
+[data-flex~="main:right"] {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.ui-replay-title{
+	padding: 5px 10px;
+    line-height: 24px;
+    border-left: 8px solid #80bd01;
+    background: #eee;
+    font-weight: normal;
+    font-size: 14px;
+}
+.ui-user-title{
+	position:relative;
+	display:-webkit-box;
+	display:flex;
+	padding:1rem .5rem;
+	border-bottom:1px solid #ddd;
+}
+.ui-user-img{
+	width:3rem;
+	height:3rem;
+	border-radius:100%;
+	-webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+	margin-right:1rem;
+}
+.ui-user-img img{
+	width:100%;
+	border-radius:100%;
+}
+.ui-user-data{
+	-webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
